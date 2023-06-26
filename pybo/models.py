@@ -15,10 +15,3 @@ class Answer(models.Model):
     create_date = models.DateTimeField()
     modify_date = models.DateTimeField(null=True, blank=True)
     voter = models.ManyToManyField(User, related_name='voter_answer')
-
-
-"""
-models.py 변경 시 해야할 것:
-    python manage.py makemigrations
-    python manage.py migrate
-"""
