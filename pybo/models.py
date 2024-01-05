@@ -6,7 +6,7 @@ class Question(models.Model):
     content = models.TextField()
     create_date = models.DateTimeField()
     modify_date = models.DateTimeField(null=True, blank=True)
-    voter = models.ManyToManyField(User, related_name='voter_question')  # 추천인 추가
+    voter = models.ManyToManyField(User, related_name='voter_question')
 
 class Answer(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
